@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+
+  :root {
+    --icon-scale: 1;
+  }
+
+  svg.lucide {
+    transform: scale(var(--icon-scale));
+    transition: transform 0.2s ease-in-out;
+  }
+}
